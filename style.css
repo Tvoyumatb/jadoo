@@ -1,0 +1,174 @@
+@font-face {
+    src: url(font.size/Volkhov-Bold.ttf);
+    font-family: 'volkhov', sans-serif;
+}
+
+@font-face {
+    src: url(font.size/Poppins-Regular.ttf);
+    font-family: 'popa-400', sans-serif;
+}
+
+@font-face {
+    src: url(font.size/Poppins-Medium.ttf);
+    font-family: 'popa-500', sans-serif;
+}
+
+@font-face {
+    src: url(font.size/Poppins-SemiBold.ttf);
+    font-family: 'popa-600', sans-serif;
+}
+
+@font-face {
+    src: url(font.size/Poppins-Bold.ttf);
+    font-family: 'popa-700', sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --text-color: #5e6282;
+    --site-title: #14183e;
+    --yellow: #F1A501;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'popa-400', sans-serif;
+    font-weight: 400;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* General */
+.container {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.site-title {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'volkhov', sans-serif;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'poppins-600', sans-serif;
+}
+
+/* Header */
+.header
+
+.header .container {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+}
+
+.header .container .logo {
+    width: 115px;
+}
+
+.header .container .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.header .container .menu .link {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'popa-400', sans-serif;
+    color: var(--black);
+    transition: 0.2s;
+}
+
+.header .container .menu .link:nth-last-child(1) {
+    border: var(--black);
+}
+
+.header .container .menu .link:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+
+.header .container .menu select {
+    border: none;
+    color: var(--yellow);
+}
+
+/* Destionation */
+.destinations {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.destinations .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding-top: 60px;
+}
+
+.destinations .wrapper .card {
+    width: 315px;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(128, 128, 128, 0.2);
+}
+
+.destinations .wrapper .card .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destinations .wrapper .card .content {
+    color: var(--text-color);
+    background: var(--white);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.destinations .wrapper .card .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.destinations .wrapper .card .content .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-top: 20px;
+}
