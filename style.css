@@ -318,7 +318,18 @@ button {
     border-radius: 24px;
     overflow: hidden;
     position: relative;
+    transition: 0,2s;
     box-shadow: 0 10px 10px rgba(128, 128, 128, 0.2);
+}
+
+.destinations .wrapper .card:hover{
+    box-shadow:
+        0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.00),
+        0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+        0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+        0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01),
+        0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+        0px 100px 80px 0px rgba(0, 0, 0, 0.02);
 }
 
 .destinations .wrapper .card .image-block img {
@@ -353,29 +364,10 @@ button {
 
 
 
-/* Media */
-@media(max-width: 1250px) {
-
-    /* Traver */
-    .traver .image-block {
-        position: static;
-    }
-
-    .traver .image-block img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .traver .container .content .sub-title {
-        margin-top: 20px;
-    }
-}
-
 /* easySteps */
 .easySteps {
     padding: 100px 0 30px;
-
+    
 }
 
 
@@ -383,8 +375,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 .easySteps .container .wrapper .left .upper-title {
@@ -408,7 +398,7 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 21px;
-
+    
 }
 
 .easySteps .container .wrapper .left .block-wrapper {
@@ -440,21 +430,23 @@ button {
     border-radius: 26px;
     background: #fff;
     position: relative;
-    box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.00), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.00),
+    0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.01), 
+    0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01), 
+    0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.02);
 }
 
 .easySteps .container .wrapper .right-card::before {
     content: '';
-    width: 354px;
-    height: 367px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    border-radius: 367px;
-    opacity: 0.8;
-    background: #59B1E6;
-    filter: blur(75px);
+    z-index: -5;
+    top: -30%;
+    right: -30%;
+    background: url(images/blue-bg.png) no-repeat top left / cover;
 }
 
 .easySteps .container .wrapper .right-card .image-block {
@@ -462,7 +454,6 @@ button {
     height: 161px;
     overflow: hidden;
     border-radius: 24px;
-    background: lightgray 50% / cover no-repeat;
 }
 
 .easySteps .container .wrapper .right-card .image-block img {
@@ -482,7 +473,7 @@ button {
 .easySteps .container .wrapper .right-card .card-wrapper {
     display: flex;
     gap: 20px;
-
+    
 }
 
 .easySteps .container .wrapper .right-card .card-wrapper .left .text-wrapper {
@@ -512,8 +503,30 @@ button {
 }
 
 .easySteps .container .wrapper .right-card .card-wrapper .right {
+    width: 263px;
     display: flex;
-    gap: 1px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11px;
+    background: var(--white);
+    position: absolute;
+    right: -40%;
+    bottom: 15%;
+    border-radius: 18px;
+    box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.00),
+    0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.01),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+    0px 38.51852px 25.48148px 0px rgba(0, 0, 0, 0.01),
+    0px 64.81481px 46.85185px 0px rgba(0, 0, 0, 0.02),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+    padding: 22px;
+    pointer-events: none;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.easySteps .container .wrapper .right-card:hover .card-wrapper .right {
+    transform: scale(1);
 }
 
 .easySteps .container .wrapper .right-card .card-wrapper .right .desc .top {
@@ -702,22 +715,42 @@ button {
 
 
 @media(max-width: 1000px) {
-
+    
     /* Header */
     .header .container .burger {
         display: block;
     }
-
+    
     .header .container .menu {
         display: none;
     }
-
+    
     /* Traver */
     .traver .image-block {
         display: none;
     }
-
+    
     .traver .container .content {
         width: 90%;
     }
 }
+
+/* Media */
+@media(max-width: 1250px) {
+
+    /* Traver */
+    .traver .image-block {
+        position: static;
+    }
+
+    .traver .image-block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .traver .container .content .sub-title {
+        margin-top: 20px;
+    }
+}
+
